@@ -9,6 +9,11 @@ import { ConvertImage } from '@/components/tools/ConvertImage';
 import { CropImage } from '@/components/tools/CropImage';
 import { RotateImage } from '@/components/tools/RotateImage';
 import { WatermarkImage } from '@/components/tools/WatermarkImage';
+import { CompressJpgImage } from '@/components/tools/CompressJpgImage';
+import { CompressPngImage } from '@/components/tools/CompressPngImage';
+import { WebpConverter } from '@/components/tools/WebpConverter';
+import { ImageToPdf } from '@/components/tools/ImageToPdf';
+import { BatchCompress } from '@/components/tools/BatchCompress';
 import { ComingSoon } from '@/components/tools/ComingSoon';
 import type { Metadata } from 'next';
 import Link from 'next/link';
@@ -64,6 +69,11 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
         {slug === 'crop-image' && <CropImage />}
         {slug === 'rotate-image' && <RotateImage />}
         {slug === 'image-watermark' && <WatermarkImage />}
+        {slug === 'compress-jpg' && <CompressJpgImage />}
+        {slug === 'compress-png' && <CompressPngImage />}
+        {slug === 'webp-converter' && <WebpConverter />}
+        {slug === 'image-to-pdf' && <ImageToPdf />}
+        {slug === 'image-compressor-batch' && <BatchCompress />}
         {!tool.available && <ComingSoon toolTitle={tool.title} />}
 
         <section className="mt-12 p-6 rounded-2xl bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-800">
