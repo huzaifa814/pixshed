@@ -6,6 +6,9 @@ import { siteConfig } from '@/config/site';
 import { CompressImage } from '@/components/tools/CompressImage';
 import { ResizeImage } from '@/components/tools/ResizeImage';
 import { ConvertImage } from '@/components/tools/ConvertImage';
+import { CropImage } from '@/components/tools/CropImage';
+import { RotateImage } from '@/components/tools/RotateImage';
+import { WatermarkImage } from '@/components/tools/WatermarkImage';
 import { ComingSoon } from '@/components/tools/ComingSoon';
 import type { Metadata } from 'next';
 import Link from 'next/link';
@@ -58,6 +61,9 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
         {slug === 'compress-image' && <CompressImage />}
         {slug === 'resize-image' && <ResizeImage />}
         {slug === 'convert-image' && <ConvertImage />}
+        {slug === 'crop-image' && <CropImage />}
+        {slug === 'rotate-image' && <RotateImage />}
+        {slug === 'image-watermark' && <WatermarkImage />}
         {!tool.available && <ComingSoon toolTitle={tool.title} />}
 
         <section className="mt-12 p-6 rounded-2xl bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-800">
