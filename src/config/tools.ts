@@ -19,7 +19,7 @@ export const tools: Tool[] = [
   { slug: 'convert-image', title: 'Convert Image', description: 'Convert between JPG, PNG, WebP, and other formats. Keep quality, change extension.', icon: '🔄', category: 'convert', available: true },
   { slug: 'webp-converter', title: 'WebP Converter', description: 'Convert any image to modern WebP format for smaller, faster web images.', icon: '🚀', category: 'convert', available: true },
   { slug: 'image-to-pdf', title: 'Image to PDF', description: 'Convert one or many images into a single PDF document. A4, Letter, or Legal.', icon: '📄', category: 'convert', available: true },
-  { slug: 'remove-background', title: 'Remove Background', description: 'Auto-detect and remove image backgrounds. AI-powered, runs in your browser.', icon: '✨', category: 'edit', available: false },
+  { slug: 'remove-background', title: 'Remove Background', description: 'Auto-detect and remove image backgrounds. AI-powered, runs in your browser.', icon: '✨', category: 'edit', available: true },
 ];
 
 export const getTool = (slug: string) => tools.find(t => t.slug === slug);

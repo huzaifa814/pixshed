@@ -14,6 +14,7 @@ import { CompressPngImage } from '@/components/tools/CompressPngImage';
 import { WebpConverter } from '@/components/tools/WebpConverter';
 import { ImageToPdf } from '@/components/tools/ImageToPdf';
 import { BatchCompress } from '@/components/tools/BatchCompress';
+import { RemoveBackground } from '@/components/tools/RemoveBackground';
 import { ComingSoon } from '@/components/tools/ComingSoon';
 import type { Metadata } from 'next';
 import Link from 'next/link';
@@ -74,6 +75,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
         {slug === 'webp-converter' && <WebpConverter />}
         {slug === 'image-to-pdf' && <ImageToPdf />}
         {slug === 'image-compressor-batch' && <BatchCompress />}
+        {slug === 'remove-background' && <RemoveBackground />}
         {!tool.available && <ComingSoon toolTitle={tool.title} />}
 
         <section className="mt-12 p-6 rounded-2xl bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-800">
