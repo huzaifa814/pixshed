@@ -18,11 +18,19 @@ const ENDPOINT = 'https://api.indexnow.org/indexnow';
 const toolsTxt = readFileSync(resolve(__dirname, '../src/config/tools.ts'), 'utf-8');
 const toolSlugs = [...toolsTxt.matchAll(/^\s+\{\s*slug:\s*'([a-z0-9-]+)'/gm)].map((m) => m[1]);
 
-const STATIC_PATHS = ['', '/tools', '/about', '/faq', '/privacy', '/terms', '/contact'];
+const guidesTxt = readFileSync(resolve(__dirname, '../src/content/guides.ts'), 'utf-8');
+const guideSlugs = [...guidesTxt.matchAll(/^\s+slug:\s*'([a-z0-9-]+)'/gm)].map((m) => m[1]);
+
+const altsTxt = readFileSync(resolve(__dirname, '../src/content/alternatives.ts'), 'utf-8');
+const altSlugs = [...altsTxt.matchAll(/^\s+slug:\s*'([a-z0-9-]+)'/gm)].map((m) => m[1]);
+
+const STATIC_PATHS = ['', '/tools', '/guides', '/alternatives', '/about', '/faq', '/privacy', '/terms', '/contact'];
 
 const urls = [];
 for (const p of STATIC_PATHS) urls.push(`https://${HOST}${p}`);
 for (const slug of toolSlugs) urls.push(`https://${HOST}/tools/${slug}`);
+for (const slug of guideSlugs) urls.push(`https://${HOST}/guides/${slug}`);
+for (const slug of altSlugs) urls.push(`https://${HOST}/alternatives/${slug}`);
 
 async function submit(slice) {
   const res = await fetch(ENDPOINT, {
