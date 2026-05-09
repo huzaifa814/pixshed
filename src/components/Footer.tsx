@@ -30,9 +30,11 @@ export function Footer() {
           <p>© {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</p>
           <div className="flex flex-wrap gap-4">
             <a href="https://www.pdfshed.com" className="hover:text-gray-900 dark:hover:text-white">PDFShed</a>
-            <a href="https://www.pixshed.com" className="hover:text-gray-900 dark:hover:text-white">PixShed</a>
             <a href="https://www.simplycalcs.com" className="hover:text-gray-900 dark:hover:text-white">SimplyCalcs</a>
             <a href="https://www.resumeshed.com" className="hover:text-gray-900 dark:hover:text-white">ResumeShed</a>
+            <a href="https://www.insurecalcs.com" className="hover:text-gray-900 dark:hover:text-white">InsureCalcs</a>
+            <a href="https://www.creditcardcalcs.com" className="hover:text-gray-900 dark:hover:text-white">CreditCardCalcs</a>
+            <a href="https://www.retirecalcs.com" className="hover:text-gray-900 dark:hover:text-white">RetireCalcs</a>
           </div>
         </div>
       </div>
