@@ -29,6 +29,7 @@ export function Footer() {
         <div className="mt-10 pt-6 border-t border-gray-200 dark:border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500">
           <p>© {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</p>
           <div className="flex flex-wrap gap-4">
+            <a href="https://www.freebietemplate.com" className="hover:text-gray-900 dark:hover:text-white">FreebieTemplate</a>
             <a href="https://www.pdfshed.com" className="hover:text-gray-900 dark:hover:text-white">PDFShed</a>
             <a href="https://www.simplycalcs.com" className="hover:text-gray-900 dark:hover:text-white">SimplyCalcs</a>
             <a href="https://www.resumeshed.com" className="hover:text-gray-900 dark:hover:text-white">ResumeShed</a>
